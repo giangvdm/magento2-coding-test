@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Sales\Block\Order\Info"
+                   template="Acme_Checkout::order/view/parent-info.phtml"
+                   as="parent.info"
+                   name="sales.order.parent.info"
+                   after="sales.order.info">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Acme\Checkout\ViewModel\Order\View\ParentInfo</argument>
+                </arguments>
+            </block>
+        </referenceContainer></body>
+</page>

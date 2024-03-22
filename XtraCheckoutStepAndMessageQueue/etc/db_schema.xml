@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="quote" resource="default" engine="innodb" comment="Sales Quote">
+        <column xsi:type="varchar" name="parent_id" nullable="false" length="25" comment="Parent ID" />
+        <column xsi:type="varchar" name="parent_name" nullable="false" length="255" comment="Parent Name" />
+        <column xsi:type="varchar" name="parent_phone" nullable="false" length="25" comment="Parent Phone" />
+        <column xsi:type="int" name="parent_age" nullable="false" comment="Parent Age" />
+    </table>
+</schema>

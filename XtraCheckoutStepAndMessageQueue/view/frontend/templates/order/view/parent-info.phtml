@@ -1,0 +1,21 @@
+<?php /** @var $block \Magento\Sales\Block\Order\Info */ ?>
+<?php $_order = $block->getOrder() ?>
+<?php
+$viewModel = $block->getViewModel();
+$quote = $viewModel->getQuote($_order->getQuoteId());
+if ($quote):
+?>
+<div class="block block-order-details-view">
+    <div class="block-content">
+        <div class="box box-parent-info">
+            <strong class="box-title"><span><?= $block->escapeHtml(__('Parent Information')) ?></span></strong>
+            <div class="box-content">
+                <div class="parent-id">ID: <?= $quote->getParentId() ?></div>
+                <div class="parent-name">Name: <?= $quote->getParentName() ?></div>
+                <div class="parent-phone">Phone: <?= $quote->getParentPhone() ?></div>
+                <div class="parent-age">Age: <?= $quote->getParentAge() ?></div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

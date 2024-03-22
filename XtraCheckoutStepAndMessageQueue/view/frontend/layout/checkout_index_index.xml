@@ -1,0 +1,108 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <!-- The new step you add -->
+                                        <item name="parentInfo" xsi:type="array">
+                                            <item name="component" xsi:type="string">Acme_Checkout/js/view/parentInfo</item>
+                                            <item name="sortOrder" xsi:type="string">3</item>
+                                            <item name="children" xsi:type="array">
+                                                <!-- Parent Info Form fields -->
+                                                <item name="parent-info-form-container" xsi:type="array">
+                                                    <item name="component" xsi:type="string">Acme_Checkout/js/view/parentInfo/form</item>
+                                                    <item name="displayArea" xsi:type="string">parent-info-form-container</item>
+                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                    <item name="config" xsi:type="array">
+                                                        <item name="template" xsi:type="string">Acme_Checkout/parentInfo/form</item>
+                                                    </item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="parent-info-form-fieldset" xsi:type="array">
+                                                            <item name="component" xsi:type="string">uiComponent</item>
+                                                            <item name="displayArea" xsi:type="string">parent-info-form-fields</item>
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="id" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="customScope" xsi:type="string">parentInfoForm</item>
+                                                                        <item name="template" xsi:type="string">ui/form/field</item>
+                                                                        <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>
+                                                                    </item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                    <item name="dataScope" xsi:type="string">parentInfoForm.id</item>
+                                                                    <item name="label" xsi:type="string">Parent ID</item>
+                                                                    <item name="sortOrder" xsi:type="string">1</item>
+                                                                    <item name="validation" xsi:type="array">
+                                                                        <item name="required-entry" xsi:type="string">true</item>
+                                                                    </item>
+                                                                </item>
+                                                                <item name="name" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                                                    <item name="config" xsi:type="array">
+                                                                        <!-- customScope is used to group elements within a single form (e.g. they can be validated separately) -->
+                                                                        <item name="customScope" xsi:type="string">parentInfoForm</item>
+                                                                        <item name="template" xsi:type="string">ui/form/field</item>
+                                                                        <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>
+                                                                    </item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                    <item name="dataScope" xsi:type="string">parentInfoForm.name</item>
+                                                                    <item name="label" xsi:type="string">Parent Name</item>
+                                                                    <item name="sortOrder" xsi:type="string">2</item>
+                                                                    <item name="validation" xsi:type="array">
+                                                                        <item name="required-entry" xsi:type="string">true</item>
+                                                                    </item>
+                                                                </item>
+                                                                <item name="phone" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                                                    <item name="config" xsi:type="array">
+                                                                        <!-- customScope is used to group elements within a single form (e.g. they can be validated separately) -->
+                                                                        <item name="customScope" xsi:type="string">parentInfoForm</item>
+                                                                        <item name="template" xsi:type="string">ui/form/field</item>
+                                                                        <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>
+                                                                    </item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                    <item name="dataScope" xsi:type="string">parentInfoForm.phone</item>
+                                                                    <item name="label" xsi:type="string">Phone Number</item>
+                                                                    <item name="sortOrder" xsi:type="string">3</item>
+                                                                    <item name="validation" xsi:type="array">
+                                                                        <item name="required-entry" xsi:type="string">true</item>
+                                                                    </item>
+                                                                </item>
+                                                                <item name="age" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                                                    <item name="config" xsi:type="array">
+                                                                        <!-- customScope is used to group elements within a single form (e.g. they can be validated separately) -->
+                                                                        <item name="customScope" xsi:type="string">parentInfoForm</item>
+                                                                        <item name="template" xsi:type="string">ui/form/field</item>
+                                                                        <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>
+                                                                    </item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                    <item name="dataScope" xsi:type="string">parentInfoForm.age</item>
+                                                                    <item name="label" xsi:type="string">Age</item>
+                                                                    <item name="sortOrder" xsi:type="string">4</item>
+                                                                    <item name="validation" xsi:type="array">
+                                                                        <item name="required-entry" xsi:type="string">true</item>
+                                                                        <item name="validate-number" xsi:type="string">true</item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,10 @@
+{
+    "quote": {
+        "column": {
+            "parent_id": true,
+            "parent_name": true,
+            "parent_phone": true,
+            "parent_age": true
+        }
+    }
+}

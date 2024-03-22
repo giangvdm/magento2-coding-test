@@ -1,0 +1,31 @@
+<!--The 'step_code' value from the .js file should be used-->
+<li id="parentInfo" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Confirm Parent Info'" data-role="title"></div>
+    <div id="checkout-step-parent-info"
+         class="step-content"
+         data-role="content">
+
+        <!-- ko foreach: getRegion('parent-info-form-container') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+
+        <div class="actions-toolbar">
+            <div class="secondary">
+                <button type="button"
+                        data-bind="
+                            attr: {title: $t('Back')},
+                            click: back
+                        "
+                        class="action secondary checkout-back"
+                >
+                    <span data-bind="i18n: 'Back'"></span>
+                </button>
+            </div>
+        </div>
+        <div class="checkout-agreements-block">
+            <!-- ko foreach: getRegion('before-place-order') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+    </div>
+</li>
